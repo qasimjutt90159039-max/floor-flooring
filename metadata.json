@@ -1,0 +1,6 @@
+{
+  "name": "First Floor Floorings",
+  "description": "Architectural flooring showroom in DHA Phase 5, Karachi. Premium SPC vinyl, laminate, engineered wood, hardwood, carpet tiles, artificial grass, and outdoor decking with nationwide shipping & installation in Karachi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

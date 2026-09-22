@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Architectural Showroom Palette */
+    --color-cream-base: #fbf9f5;
+    --color-cream-soft: #f4f0e6;
+    --color-stone-100: #eae5dc;
+    --color-stone-200: #d8d1c4;
+    --color-stone-300: #bcb4a3;
+    --color-stone-500: #8c8273;
+    --color-stone-700: #575045;
+    
+    /* Warm Walnut */
+    --color-walnut-50: #fbf7f4;
+    --color-walnut-100: #f3eae2;
+    --color-walnut-300: #cfb7a1;
+    --color-walnut-500: #8c6a4d;
+    --color-walnut-700: #543e2c;
+    --color-walnut-900: #322419;
+
+    /* Matte Architectural Black */
+    --color-charcoal-900: #141312;
+    --color-charcoal-800: #1f1d1b;
+    --color-charcoal-700: #2c2926;
+
+    /* Single Muted Terracotta Accent */
+    --color-terracotta: #c2633e;
+    --color-terracotta-dark: #a94f2d;
+    --color-terracotta-light: #faefe9;
+
+    /* Warm Brass / Golden Accent */
+    --color-brass: #b8860b;
+    --color-brass-light: #fdf8eb;
+
+    --font-heading: 'Fraunces', Georgia, serif;
+    --font-body: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-urdu: 'Noto Nastaliq Urdu', serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-cream-base);
+    color: var(--color-charcoal-900);
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-charcoal-900);
+    letter-spacing: -0.02em;
+  }
+
+  [dir="rtl"] {
+    font-family: var(--font-urdu), var(--font-body);
+  }
+}
+
+/* Custom architectural utility classes */
+.font-serif-heading {
+  font-family: var(--font-heading);
+}
+
+.font-sans-body {
+  font-family: var(--font-body);
+}
+
+/* Plank line motif: subtle horizontal wood plank line */
+.plank-border-b {
+  border-bottom: 1px solid rgba(140, 130, 115, 0.2);
+}
+
+.plank-border-t {
+  border-top: 1px solid rgba(140, 130, 115, 0.2);
+}
+
+.plank-divider {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(140, 130, 115, 0.25) 0,
+    rgba(140, 130, 115, 0.25) 120px,
+    transparent 120px,
+    transparent 124px
+  );
+  height: 1px;
+}
+
+/* Custom print style for flooring invoice / quote sheets */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
